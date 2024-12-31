@@ -1,6 +1,8 @@
 import { useState } from "react";
 import { usePatients } from "../../../hooks/usePatients";
 import { PatientDetails } from "./PatientDetails";
+import malePhoto from "../../../assets/image/corporate-user-icon-female.svg";
+import femalePhto from "../../../assets/image/corporate-user-icon.svg";
 
 export const ListPatients = () => {
   const { patients } = usePatients();
@@ -13,8 +15,15 @@ export const ListPatients = () => {
       {patients &&
         patients.map((patient) => (
           <div className="cell" key={patient.id}>
-            <h3>{patient.name}</h3>
-            <img src={patient.photo} alt={patient.name} />
+            <h1>{patient.name}</h1>
+            <img
+              src={
+                patient.medicalHistory?.gender === "Masculino"
+                  ? malePhoto
+                  : femalePhto
+              }
+              alt={patient.name}
+            />
             <p>Edad: {patient.age}</p>
             <p>Diagnostico: {patient.diagnostic}</p>
             <button
