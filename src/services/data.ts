@@ -271,37 +271,4 @@ export const patientsData = [
       lifestyle: { smoking: "No", alcohol: "No", exercise: "Leve (terapia)" },
     },
   },
-  {
-    id: 1735673729513,
-    name: "Jorge Castillo",
-    age: 40,
-    photo: "https://via.placeholder.com/150?text=Jorge+Castillo",
-    diagnostic:
-      "La gastritis crónica requiere cambios en la dieta y medicación para reducir los síntomas. Evitar alimentos irritantes y realizar chequeos regulares es fundamental para prevenir complicaciones.",
-    medicalHistory: {
-      dob: "1984-11-03",
-      gender: "Masculino",
-      allergies: "Ninguna",
-      conditions: "Gastritis crónica",
-      medications: "Omeprazol",
-      height: 1.8,
-      weight: 76.5,
-      bloodType: "O+",
-      emergencyContact: {
-        name: "Mariana Castillo",
-        relation: "Esposa",
-        phone: "+1-321-456-7890",
-      },
-      vaccines: ["COVID-19", "Tétanos"],
-      recentTests: ["Endoscopía gástrica"],
-      lastVisit: "2024-12-05",
-      doctorNotes:
-        "Mejoría notable en síntomas. Recomendado mantener dieta blanda.",
-      lifestyle: {
-        smoking: "No",
-        alcohol: "Raramente",
-        exercise: "Regular (moderado)",
-      },
-    },
-  },
 ];
