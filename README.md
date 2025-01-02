@@ -16,11 +16,11 @@
 
 ## Screenshots
 
-![login](./src/assets/images/1.png)
-![login datos incorrectos](./src/assets/images/2.png)
-![login datos del usuario](./src/assets/images/3.png)
-![home](./src/assets/images/4.png)
-![modal](./src/assets/images/5.png)
+![login](./src/assets/image/1.png)
+![login datos incorrectos](./src/assets/image/2.png)
+![login datos del usuario](./src/assets/image/3.png)
+![home](./src/assets/image/4.png)
+![modal](./src/assets/image/5.png)
 
 ## Tecnologias usadas
 
