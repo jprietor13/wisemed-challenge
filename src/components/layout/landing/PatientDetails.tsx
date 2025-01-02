@@ -26,7 +26,7 @@ export const PatientDetails: React.FC<DetailsProps> = ({
         <div className="modal-card">
           <header className="modal-card-head">
             <p className="modal-card-title has-text-centered">
-              Ficha clinica de {patients.name}
+              <strong>Ficha clinica de {patients.name}</strong>
             </p>
             <button
               className="delete"
@@ -38,7 +38,10 @@ export const PatientDetails: React.FC<DetailsProps> = ({
             <TableDetails patients={patients} />
           </section>
           <div className="modal-card-foot">
-            <button className="button" onClick={handleClose}>
+            <button
+              className="button is-primary is-fullwidth"
+              onClick={handleClose}
+            >
               Cerrar
             </button>
           </div>

@@ -1,8 +1,8 @@
 import { useState } from "react";
 import { usePatients } from "../../../hooks/usePatients";
 import { PatientDetails } from "./PatientDetails";
-import malePhoto from "../../../assets/image/corporate-user-icon-female.svg";
-import femalePhto from "../../../assets/image/corporate-user-icon.svg";
+import femalePhoto from "../../../assets/image/corporate-user-icon-female.svg";
+import malePhoto from "../../../assets/image/corporate-user-icon.svg";
 
 export const ListPatients = () => {
   const { patients } = usePatients();
@@ -11,36 +11,65 @@ export const ListPatients = () => {
   const [open, setOpen] = useState(false);
 
   return (
-    <div className="grid">
+    <div className="columns is-multiline mx-1">
       {patients &&
         patients.map((patient) => (
-          <div className="cell" key={patient.id}>
-            <h1>{patient.name}</h1>
-            <img
-              src={
-                patient.medicalHistory?.gender === "Masculino"
-                  ? malePhoto
-                  : femalePhto
-              }
-              alt={patient.name}
-            />
-            <p>Edad: {patient.age}</p>
-            <p>Diagnostico: {patient.diagnostic}</p>
-            <button
-              onClick={() => {
-                setId(patient.id);
-                setOpen(true);
-              }}
+          <div className="column is-one-third" key={patient.id}>
+            <div
+              className="card has-background-light is-flex is-flex-direction-column"
+              style={{ minHeight: "320px", maxHeight: "320px" }}
             >
-              Ver detalles
-            </button>
-            {id === patient.id && (
-              <PatientDetails
-                patients={patient}
-                open={open}
-                setOpen={setOpen}
-              />
-            )}
+              <div className="card-content is-flex is-flex-direction-column is-justify-content-space-between">
+                <div>
+                  <div className="media">
+                    <div className="media-left">
+                      <figure className="image is-48x48">
+                        <img
+                          src={
+                            patient.medicalHistory?.gender === "Masculino"
+                              ? malePhoto
+                              : femalePhoto
+                          }
+                          alt={patient.name}
+                        />
+                      </figure>
+                    </div>
+                    <div className="media-content">
+                      <p className="title is-4 has-text-primary">
+                        {patient.name}
+                      </p>
+                      <p className="subtitle is-6 has-text-grey-dark">
+                        Edad: {patient.age}
+                      </p>
+                    </div>
+                  </div>
+                  <div className="content">
+                    <p className="has-text-info">
+                      <strong className="has-text-info">Diagnóstico:</strong>{" "}
+                      {patient.diagnostic}
+                    </p>
+                  </div>
+                </div>
+                <div className="button-content">
+                  <button
+                    className="button is-primary is-fullwidth"
+                    onClick={() => {
+                      setId(patient.id);
+                      setOpen(true);
+                    }}
+                  >
+                    Ver mas detalles
+                  </button>
+                </div>
+              </div>
+              {id === patient.id && (
+                <PatientDetails
+                  patients={patient}
+                  open={open}
+                  setOpen={setOpen}
+                />
+              )}
+            </div>
           </div>
         ))}
     </div>

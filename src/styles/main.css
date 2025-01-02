@@ -2,7 +2,18 @@ body {
   background-color: #cbd5d5;
 }
 
-img {
-  width: 200px;
-  height: 200px;
+.card.has-background-light {
+  position: relative;
+}
+
+.button-content {
+  width: 90%;
+  position: absolute;
+  bottom: 20px;
+}
+
+.modal {
+  --bulma-modal-card-head-background-color: #00d1b2;
+  /* --bulma-modal-card-body-background-color: red;
+  --bulma-modal-card-foot-background-color: red; */
 }

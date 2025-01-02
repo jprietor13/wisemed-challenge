@@ -24,13 +24,15 @@ export const TableDetails: React.FC<DetailsProps> = ({ patients }) => {
           </tr>
 
           <tr>
-            <td>Altura: {patients?.medicalHistory?.height}</td>
-            <td>Peso: {patients?.medicalHistory?.weight}</td>
+            <td>Altura: {patients?.medicalHistory?.height}m</td>
+            <td>Peso: {patients?.medicalHistory?.weight} kgs</td>
             <td>Tipo de sangre: {patients?.medicalHistory?.bloodType}</td>
           </tr>
 
           <tr>
-            <td colSpan={3}>DATOS CONCACTO DE EMERGENCIA</td>
+            <td colSpan={3} className="has-text-centered">
+              <strong>DATOS CONTACTO DE EMERGENCIA</strong>
+            </td>
           </tr>
 
           <tr>
@@ -66,7 +68,13 @@ export const TableDetails: React.FC<DetailsProps> = ({ patients }) => {
           </tr>
 
           <tr>
-            <td colSpan={3}>ESTILOS DE VIDA</td>
+            <td
+              colSpan={3}
+              className="has-text-centered"
+              style={{ height: "20px" }}
+            >
+              <strong>ESTILOS DE VIDA</strong>
+            </td>
           </tr>
 
           <tr>
