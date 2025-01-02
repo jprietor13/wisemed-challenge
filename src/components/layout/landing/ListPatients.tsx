@@ -11,7 +11,7 @@ export const ListPatients = () => {
   const [open, setOpen] = useState(false);
 
   return (
-    <div className="columns is-multiline mx-1">
+    <div className="columns is-multiline mx-1 mt-2">
       {patients &&
         patients.map((patient) => (
           <div className="column is-one-third" key={patient.id}>

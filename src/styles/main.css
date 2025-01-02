@@ -2,6 +2,12 @@ body {
   background-color: #cbd5d5;
 }
 
+.header-content,
+.footer-content {
+  background-color: #00d1b2;
+  color: #404654;
+}
+
 .card.has-background-light {
   position: relative;
 }
@@ -14,6 +20,4 @@ body {
 
 .modal {
   --bulma-modal-card-head-background-color: #00d1b2;
-  /* --bulma-modal-card-body-background-color: red;
-  --bulma-modal-card-foot-background-color: red; */
 }
