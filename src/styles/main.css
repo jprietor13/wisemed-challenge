@@ -18,6 +18,10 @@ body {
   bottom: 20px;
 }
 
+.button.is-secondary {
+  height: 40px;
+}
+
 .modal {
   --bulma-modal-card-head-background-color: #00d1b2;
 }
