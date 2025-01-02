@@ -50,5 +50,3 @@ Una vez descargado el repositorio, se puede ver el proyecto con un editor como V
 ```
 
 De esa forma, en la terminal, generara una url parecida a esta http://localhost:5173/ en donde se puede ver la app en un entorno local y de desarrollo
-
-## Endpoints
