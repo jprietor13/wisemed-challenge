@@ -1,50 +1,54 @@
-# React + TypeScript + Vite
+# WiseMed Challenge
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+##### El objetivo de esta aplicación es construir una landing con una serie de tarjetas de paciente en donde se muestran los datos básicos como el nombre, la edad, diagnostico principal y un botón el cual lanza una modal de detalles con mas información sobre la persona.
 
-Currently, two official plugins are available:
+#
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Caracteristicas
 
-## Expanding the ESLint configuration
+##### La aplicación esta realizada con ReactJS, principalmente cuenta con 2 vistas las cuales son el login y el home. en el login, se muestra un formulario con 2 campos (usuario y contraseña). se puede poner cualquier usuario y contraseña siempre y cuando la contraseña contenga mas de 6 caracteres y que tanto usuario y contraseña sean enviados. de lo contrario no se podra acceder.
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+##### Una vez se verifica la información del login, se accede a la home de la aplicacion en donde hay 9 tarjetas con los datos solicitados mas el botón que muestra la modal con información detallada
 
-- Configure the top-level `parserOptions` property like this:
+#### Por ultimo, en el header se muestra el nombre del usuario logeado y un botón para cerrar la sesión y enviar al login nuevamente
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+#
+
+## Screenshots
+
+![login](./src/assets/images/1.png)
+![login datos incorrectos](./src/assets/images/2.png)
+![login datos del usuario](./src/assets/images/3.png)
+![home](./src/assets/images/4.png)
+![modal](./src/assets/images/5.png)
+
+## Tecnologias usadas
+
+- ReactJS
+- Bulma CSS
+- Github
+- Formik
+- TypeScript
+- Yup
+- React Router
+
+## Instalación
+
+Verificar que se tenga Nodejs instalado o en una version superior a la 16 (v22.4.1) para la ejecucion de los comandos, tambien verificar que se tenga yarn instalado
+
+```
+- node -v ===> verificar version de node
+- yarn -v ===> verificar yarn en el pc
 ```
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+Una vez descargado el repositorio, se puede ver el proyecto con un editor como VS Code o sublime, tambien, se puede abrir directamente desde una terminal para ejecutar los comandos
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
-
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
+```sh
+- cd WiseMed-challenge-juan-prieto
+- yarn
+- npm run dev
 ```
+
+De esa forma, en la terminal, generara una url parecida a esta http://localhost:5173/ en donde se puede ver la app en un entorno local y de desarrollo
+
+## Endpoints
