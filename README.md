@@ -1,4 +1,4 @@
-# WiseMed Challenge
+# Patient Card
 
 ##### El objetivo de esta aplicación es construir una landing con una serie de tarjetas de paciente en donde se muestran los datos básicos como el nombre, la edad, diagnostico principal y un botón el cual lanza una modal de detalles con mas información sobre la persona.
 
@@ -44,7 +44,7 @@ Verificar que se tenga Nodejs instalado o en una version superior a la 16 (v22.4
 Una vez descargado el repositorio, se puede ver el proyecto con un editor como VS Code o sublime, tambien, se puede abrir directamente desde una terminal para ejecutar los comandos
 
 ```sh
-- cd WiseMed-challenge-juan-prieto
+- cd patient-card
 - yarn
 - npm run dev
 ```
